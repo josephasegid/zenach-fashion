@@ -866,12 +866,6 @@ function App() {
     [products, wishlist]
   )
 
-  const wishlistTotal = useMemo(() => {
-    const parsePrice = (price) =>
-      Number(price.replace('ETB', '').replace(/,/g, '').trim())
-    return wishlistItems.reduce((sum, item) => sum + parsePrice(item.price), 0)
-  }, [wishlistItems])
-
   const handleCategorySelect = (category, subcategory = 'All') => {
     setSelectedCategory(category)
     setSelectedSubcategory(subcategory)
@@ -1122,7 +1116,9 @@ function App() {
                       <p className="wishlist-meta">
                         Size: {selectedSizes[product.name] || 'N/A'}
                       </p>
-                      <p className="wishlist-price">{product.price}</p>
+                      <a className="price-call" href="tel:+251928630430">
+                        Call for price
+                      </a>
                       <button
                         className="text-button"
                         type="button"
@@ -1139,13 +1135,14 @@ function App() {
                     <p className="summary-value">{wishlistItems.length}</p>
                   </div>
                   <div>
-                    <p className="summary-label">Subtotal</p>
-                    <p className="summary-value">
-                      {wishlistTotal.toLocaleString('en-US')} ETB
-                    </p>
+                    <p className="summary-label">Pricing</p>
+                    <p className="summary-value">Call for price</p>
                   </div>
+                  <a className="primary request-link" href="tel:+251928630430">
+                    Call for price
+                  </a>
                   <a
-                    className="primary request-link"
+                    className="ghost request-link"
                     href={`mailto:zenachfashionn@gmail.com?subject=${encodeURIComponent(
                       'Zenach Fashion Order Request'
                     )}&body=${encodeURIComponent(
@@ -1155,15 +1152,11 @@ I would like to request the following items:
 ${wishlistItems
                         .map(
                           (item) =>
-                            `- ${item.name} (${item.price}) Size: ${
+                            `- ${item.name} Size: ${
                               selectedSizes[item.name] || 'N/A'
                             }`
                         )
                         .join('\n')}
-
-Subtotal: ${wishlistTotal.toLocaleString(
-                        'en-US'
-                      )} ETB
 
 Thank you.`
                     )}`}
@@ -1191,7 +1184,9 @@ Thank you.`
                 )}
                 <div className="product-top">
                   <p className="product-name">{product.name}</p>
-                  <p className="product-price">{product.price}</p>
+                  <a className="price-call" href="tel:+251928630430">
+                    Call for price
+                  </a>
                 </div>
                 <p className="product-note">{product.note}</p>
                 <div className="product-size">
@@ -1311,7 +1306,7 @@ Thank you.`
               lookbook drops.
             </p>
             <div className="contact-lines">
-              <p>Phone: 0987051246 / 0924373521</p>
+              <p>Phone: +251 928 630 430 / 0924373521</p>
               <p>Email: zenachfashionn@gmail.com</p>
             </div>
           </div>
@@ -1333,7 +1328,7 @@ Thank you.`
           <p className="brand-name">Zenach Fashion</p>
           <p className="brand-tag amharic">ዘናጭ ፋሽን</p>
           <p className="brand-tag">Addis Ababa, Ethiopia</p>
-          <p className="footer-contact">0987051246 Aú 0924373521</p>
+          <p className="footer-contact">+251 928 630 430 Aú 0924373521</p>
           <p className="footer-contact">zenachfashionn@gmail.com</p>
         </div>
         <div className="footer-links">
