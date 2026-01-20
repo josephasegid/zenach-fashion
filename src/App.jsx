@@ -1116,7 +1116,7 @@ function App() {
                       <p className="wishlist-meta">
                         Size: {selectedSizes[product.name] || 'N/A'}
                       </p>
-                      <a className="price-call" href="tel:+251928630430">
+                      <a className="price-call" href="tel:+251928638430">
                         Call for price
                       </a>
                       <button
@@ -1138,7 +1138,7 @@ function App() {
                     <p className="summary-label">Pricing</p>
                     <p className="summary-value">Call for price</p>
                   </div>
-                  <a className="primary request-link" href="tel:+251928630430">
+                  <a className="primary request-link" href="tel:+251928638430">
                     Call for price
                   </a>
                   <a
@@ -1184,7 +1184,7 @@ Thank you.`
                 )}
                 <div className="product-top">
                   <p className="product-name">{product.name}</p>
-                  <a className="price-call" href="tel:+251928630430">
+                  <a className="price-call" href="tel:+251928638430">
                     Call for price
                   </a>
                 </div>
@@ -1306,7 +1306,7 @@ Thank you.`
               lookbook drops.
             </p>
             <div className="contact-lines">
-              <p>Phone: +251 928 630 430 / 0924373521</p>
+              <p>Phone: +251 928 638 430 / 0924373521</p>
               <p>Email: zenachfashionn@gmail.com</p>
             </div>
           </div>
@@ -1328,7 +1328,7 @@ Thank you.`
           <p className="brand-name">Zenach Fashion</p>
           <p className="brand-tag amharic">ዘናጭ ፋሽን</p>
           <p className="brand-tag">Addis Ababa, Ethiopia</p>
-          <p className="footer-contact">+251 928 630 430 Aú 0924373521</p>
+          <p className="footer-contact">+251 928 638 430 Aú 0924373521</p>
           <p className="footer-contact">zenachfashionn@gmail.com</p>
         </div>
         <div className="footer-links">
